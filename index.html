@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch Quest - Modern Nature Arcade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Header -->
+    <header class="game-header">
+      <h1 class="game-title">CATCH QUEST</h1>
+      <p class="game-subtitle">HARVEST ORCHARD ARCADE</p>
+    </header>
+
+    <!-- Score & Stats Bar (Persistent Best-Score & Live Progress) -->
+    <div class="stats-deck">
+      <div class="stat-card">
+        <span class="stat-label">SCORE</span>
+        <span class="stat-value" id="score-display">0</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">BEST</span>
+        <span class="stat-value" id="best-score-display">0</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">LIVES</span>
+        <span class="stat-value" id="lives-display">3</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">SPEED</span>
+        <span class="stat-value"><span id="speed-display">150</span> <small>px/s</small></span>
+      </div>
+    </div>
+
+    <!-- Quick Control Bar -->
+    <div class="control-bar">
+      <button id="mute-btn" class="arcade-btn arcade-btn-secondary" type="button" aria-label="Toggle Mute">
+        <span id="mute-icon">🔊</span> <span id="mute-text">Sound: ON</span>
+      </button>
+      <button id="pause-btn" class="arcade-btn" type="button" disabled>Pause</button>
+      <button id="reset-btn" class="arcade-btn arcade-btn-secondary" type="button">Reset</button>
+    </div>
+
+    <!-- Playfield Arena -->
+    <div class="playfield-frame" id="game-area">
+      <canvas id="game-canvas" width="400" height="500"></canvas>
+
+      <!-- Ready / How to Play Overlay -->
+      <div id="ready-screen" class="arcade-overlay">
+        <div class="overlay-card">
+          <h2>HOW TO PLAY</h2>
+          <div class="instructions-list">
+            <div class="instruction-item">
+              <span class="key-badge">◄ ► / A D</span>
+              <p>Move the harvest basket left and right.</p>
+            </div>
+            <div class="instruction-item">
+              <span class="key-badge">P</span>
+              <p>Pause or resume game anytime.</p>
+            </div>
+            <div class="instruction-item">
+              <span class="item-icon-apple">●</span>
+              <p>Catch <strong>Red Apples</strong> for <strong>+1 point</strong>. Don't let them fall! Missing an apple costs <strong>1 life</strong> and <strong>-1 point</strong>.</p>
+            </div>
+            <div class="instruction-item">
+              <span class="item-icon-bomb">▲</span>
+              <p>Avoid <strong>Bombs</strong>! Catching a bomb costs <strong>1 life</strong>.</p>
+            </div>
+          </div>
+          <button id="start-btn" class="arcade-btn arcade-btn-primary" type="button">Start Game</button>
+        </div>
+      </div>
+
+      <!-- Pause Overlay (Stage 4: Clear Paused Overlay that blocks accidental playfield input) -->
+      <div id="pause-screen" class="arcade-overlay hidden" aria-modal="true" role="dialog">
+        <div class="overlay-card">
+          <div class="pause-badge">PAUSED</div>
+          <h2>GAME SUSPENDED</h2>
+          <p class="overlay-msg">Motion, timers, and spawning are frozen. Click Resume or press <strong>P</strong> to continue harvesting.</p>
+          <div class="pause-stats-mini">
+            <span>Current: <strong id="pause-score">0</strong></span>
+            <span>Record: <strong id="pause-best-score">0</strong></span>
+          </div>
+          <button id="resume-btn" class="arcade-btn arcade-btn-primary" type="button">Resume</button>
+        </div>
+      </div>
+
+      <!-- Game Over Overlay (Stage 4: Shows Final Score & Best Score) -->
+      <div id="game-over-screen" class="arcade-overlay hidden" aria-modal="true" role="dialog">
+        <div class="overlay-card">
+          <h2>GAME OVER</h2>
+          <div class="final-score-box">
+            <span class="final-label">Final Harvest</span>
+            <span class="final-value" id="final-score">0</span>
+            <span class="final-unit">Apples Gathered</span>
+          </div>
+          <div class="best-record-banner" id="best-record-banner">
+            <span class="best-record-label">All-Time Record</span>
+            <span class="best-record-value" id="game-over-best-score">0</span>
+          </div>
+          <button id="restart-btn" class="arcade-btn arcade-btn-primary" type="button">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
