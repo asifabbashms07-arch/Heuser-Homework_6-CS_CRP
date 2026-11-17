@@ -3,108 +3,756 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catch Quest - Modern Nature Arcade</title>
+  <title>Fitness Emporium — Premium Fitness & Gym in Gulshan-e-Iqbal, Karachi</title>
+  <meta name="description" content="Top-rated 4.8★ gym in Gulshan-e-Iqbal offering premium strength training, cardio deck, group workouts, and dedicated female-only sessions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "Fitness Emporium",
+    "description": "Premium gym and fitness center in Gulshan-e-Iqbal, Karachi",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "B-12, Block 1, Gulshan-e-Iqbal",
+      "addressLocality": "Karachi",
+      "addressCountry": "PK"
+    },
+    "telephone": "+923360660676",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "185"
+    }
+  }
+  </script>
 </head>
 <body>
-  <div class="game-container">
-    <!-- Header -->
-    <header class="game-header">
-      <h1 class="game-title">CATCH QUEST</h1>
-      <p class="game-subtitle">HARVEST ORCHARD ARCADE</p>
-    </header>
 
-    <!-- Score & Stats Bar (Persistent Best-Score & Live Progress) -->
-    <div class="stats-deck">
-      <div class="stat-card">
-        <span class="stat-label">SCORE</span>
-        <span class="stat-value" id="score-display">0</span>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo" aria-label="Fitness Emporium Home">
+        <span class="logo-emblem">FE</span>
+        <div class="logo-text">
+          <span class="brand-title">FITNESS EMPORIUM</span>
+          <span class="brand-sub">GULSHAN-E-IQBAL · KARACHI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#memberships" class="nav-link">Memberships</a>
+        <a href="#classes" class="nav-link">Classes</a>
+        <a href="#our-gym" class="nav-link">Our Gym</a>
+        <a href="#trainers" class="nav-link">Trainers</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#memberships" class="btn btn-gold nav-cta">Join Now</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-content">
+        <div class="badge-pill">
+          <span class="star-rating">★ 4.8 / 5.0</span>
+          <span>Gulshan's Premier Fitness Destination · 185+ Reviews</span>
+        </div>
+        <h1 class="hero-title">Elevate Your Strength. <br><span class="gold-gradient-text">Transform Your Life.</span></h1>
+        <p class="hero-subtitle">
+          Experience Gulshan's leading modern training facility featuring Olympic-standard equipment, bespoke coaching, and private female-only workout zones.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#memberships" class="btn btn-gold">Explore Memberships</a>
+          <a href="#our-gym" class="btn btn-outline">Tour The Facility</a>
+        </div>
       </div>
 
-      <div class="stat-card">
-        <span class="stat-label">BEST</span>
-        <span class="stat-value" id="best-score-display">0</span>
+      <!-- Quick Highlights Bar -->
+      <div class="highlights-bar">
+        <div class="container highlights-grid">
+          <div class="highlight-item">
+            <div class="highlight-icon">⚡</div>
+            <div>
+              <h4>Heavy Duty Equipment</h4>
+              <p>State-of-the-art bio-mechanical free weights & machines</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">✨</div>
+            <div>
+              <h4>Female-Only Sanctuary</h4>
+              <p>Dedicated evening yoga & private fitness hours</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🏆</div>
+            <div>
+              <h4>Certified Coaching</h4>
+              <p>Experienced coaches tailored to your personal goals</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">📍</div>
+            <div>
+              <h4>Prime Gulshan Location</h4>
+              <p>B-12, Block 1 with accessible secure parking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. MEMBERSHIPS SECTION -->
+    <section id="memberships" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">MEMBERSHIP TIERS</span>
+          <h2 class="section-title">Transparent Pricing, Tailored For You</h2>
+          <p class="section-desc">Flexible packages designed for high performance with no hidden registration costs.</p>
+          <div class="notice-pill">
+            <span>ℹ️ Local estimates based on current rates. Official terms verified at front desk.</span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Card 1 -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3>Gym Only</h3>
+              <p class="plan-target">Ideal for focused strength & free weights</p>
+              <div class="plan-price">
+                <span class="currency">PKR</span>
+                <span class="amount">3,499</span>
+                <span class="period">/ month</span>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li>✓ Full Access to Free Weights & Benches</li>
+              <li>✓ Resistance Machines & Cable Towers</li>
+              <li>✓ Locker Room & Shower Access</li>
+              <li>✓ Complimentary Fitness Consultation</li>
+              <li class="disabled">✕ Cardio Deck Unlimited Access</li>
+              <li class="disabled">✕ Group Studio Classes</li>
+            </ul>
+            <button class="btn btn-outline btn-block select-plan-btn" data-plan="Gym Only">Enquire Now</button>
+          </div>
+
+          <!-- Card 2 (Featured) -->
+          <div class="pricing-card featured">
+            <div class="badge-featured">MOST POPULAR</div>
+            <div class="pricing-card-header">
+              <h3>Gym + Cardio Elite</h3>
+              <p class="plan-target">Complete fitness: weights + conditioning</p>
+              <div class="plan-price">
+                <span class="currency">PKR</span>
+                <span class="amount">5,499</span>
+                <span class="period">/ month</span>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li>✓ Unlimited Free Weights & Strength Equipment</li>
+              <li>✓ Unlimited High-End Cardio Deck (Treadmills, Bikes)</li>
+              <li>✓ Core & Functional Training Floor</li>
+              <li>✓ Standard Locker & Changing Rooms</li>
+              <li>✓ Customized Workout Routine Guide</li>
+              <li class="disabled">✕ Group Fitness Class Pass</li>
+            </ul>
+            <button class="btn btn-gold btn-block select-plan-btn" data-plan="Gym + Cardio Elite">Claim Membership</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3>Group & Ladies Yoga</h3>
+              <p class="plan-target">Structured classes & dedicated ladies hours</p>
+              <div class="plan-price">
+                <span class="currency">PKR</span>
+                <span class="amount">24,999</span>
+                <span class="period">/ quarter (3 mo)</span>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li>✓ All Gym Floor & Cardio Facilities Included</li>
+              <li>✓ Unlimited Evening Yoga & Mat Sessions</li>
+              <li>✓ Dedicated Female-Only Evening Hours</li>
+              <li>✓ High-Intensity Functional Bootcamps</li>
+              <li>✓ Priority Trainer Assessment & Tracking</li>
+              <li>✓ VIP Locker Allocation</li>
+            </ul>
+            <button class="btn btn-outline btn-block select-plan-btn" data-plan="Group & Ladies Yoga">Enquire Now</button>
+          </div>
+        </div>
+
+        <!-- Membership Enquiry Direct Form -->
+        <div class="plan-enquiry-box" id="membershipEnquiryBox">
+          <div class="box-content">
+            <div class="box-text">
+              <h3>Book a Free Trial Session or Ask a Question</h3>
+              <p>Select your tier and send an instant inquiry to our management desk.</p>
+            </div>
+            <form class="quick-enquiry-form" id="planForm">
+              <input type="text" id="planUserName" placeholder="Your Full Name" required>
+              <input type="tel" id="planUserPhone" placeholder="Mobile / WhatsApp (03XX-XXXXXXX)" required>
+              <select id="planSelectedDropdown">
+                <option value="Gym Only (PKR 3,499/mo)">Gym Only Plan</option>
+                <option value="Gym + Cardio Elite (PKR 5,499/mo)" selected>Gym + Cardio Elite Plan</option>
+                <option value="Group & Ladies Yoga (PKR 24,999/3mo)">Group & Ladies Yoga Plan</option>
+                <option value="Ladies Exclusive Sessions">Ladies Exclusive Inquiries</option>
+              </select>
+              <button type="submit" class="btn btn-gold">Send Quick Booking</button>
+            </form>
+          </div>
+          <div class="form-feedback" id="planFormStatus" role="alert"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CLASSES & SCHEDULE -->
+    <section id="classes" class="section section-dark">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">GROUP PROGRAMS & SCHEDULE</span>
+          <h2 class="section-title">Designed For Strength, Flexibility & Stamina</h2>
+          <p class="section-desc">Certified instructors leading motivating classes for all fitness levels.</p>
+        </div>
+
+        <div class="classes-grid">
+          <div class="class-card">
+            <div class="class-image-tag">STRENGTH</div>
+            <div class="class-card-body">
+              <h3>Hypertrophy & Strength Training</h3>
+              <p>Learn structured compound lifting mechanics, progressive overload protocols, and safe barbell techniques.</p>
+              <div class="class-meta">
+                <span>⏱ 60 Mins</span>
+                <span>🔥 Intermediate – Advanced</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="class-card featured-border">
+            <div class="class-image-tag gold-tag">FEMALE ONLY</div>
+            <div class="class-card-body">
+              <h3>Ladies Mindful Yoga & Pilates</h3>
+              <p>Held in our secure, private female workout suite. Focus on joint mobility, core stability, and mental decompression.</p>
+              <div class="class-meta">
+                <span>⏱ 50 Mins</span>
+                <span>🌸 All Levels Welcome</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="class-card">
+            <div class="class-image-tag">CARDIO & HIIT</div>
+            <div class="class-card-body">
+              <h3>Conditioning & Metabolic Burn</h3>
+              <p>Fast-paced interval circuits designed to torch calories, improve VO2 max, and build cardiovascular endurance.</p>
+              <div class="class-meta">
+                <span>⏱ 45 Mins</span>
+                <span>⚡ All Levels</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weekly Timetable Table -->
+        <div class="schedule-container">
+          <div class="schedule-header">
+            <h3>Weekly Class Timetable</h3>
+            <p>Ladies exclusive private wing operates daily in designated evening blocks (5:00 PM – 12:00 AM).</p>
+          </div>
+          <div class="table-responsive">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Session Time</th>
+                  <th>Mon / Wed / Fri</th>
+                  <th>Tue / Thu</th>
+                  <th>Saturday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Morning (07:00 – 09:00 AM)</strong></td>
+                  <td>Functional Strength & Conditioning</td>
+                  <td>Cardio Endurance Circuit</td>
+                  <td>Open Floor Weightlifting</td>
+                </tr>
+                <tr>
+                  <td><strong>Afternoon (04:00 – 06:00 PM)</strong></td>
+                  <td>Powerlifting Fundamentals</td>
+                  <td>Core & HIIT Blast</td>
+                  <td>Mobility & Active Recovery</td>
+                </tr>
+                <tr>
+                  <td><strong>Evening (06:30 – 08:00 PM)</strong></td>
+                  <td><span class="ladies-badge">🌸 Ladies Yoga & Pilates</span></td>
+                  <td><span class="ladies-badge">🌸 Ladies Strength Training</span></td>
+                  <td><span class="ladies-badge">🌸 Ladies Conditioning</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Night (08:30 – 11:30 PM)</strong></td>
+                  <td>Heavy Duty Bodybuilding</td>
+                  <td>Athletic Hypertrophy</td>
+                  <td>Open Training & Sparring</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OUR GYM & AMENITIES -->
+    <section id="our-gym" class="section">
+      <div class="container">
+        <div class="split-layout">
+          <div class="split-text">
+            <span class="section-eyebrow">OUR FACILITY</span>
+            <h2 class="section-title">Built For Serious Fitness Lovers in Gulshan</h2>
+            <p>
+              Fitness Emporium was created to provide a refined, motivating training environment in Gulshan-e-Iqbal. 
+              We pair clean, air-conditioned training zones with world-class equipment to ensure you perform at your best every single day.
+            </p>
+            <div class="facility-points">
+              <div class="point-item">
+                <span class="point-icon">✓</span>
+                <div>
+                  <strong>Biomechanical Free Weights & Power Racks</strong>
+                  <p>Multiple Olympic lifting stations, dumbbells up to 45kg+, and heavy-duty smith machines.</p>
+                </div>
+              </div>
+              <div class="point-item">
+                <span class="point-icon">✓</span>
+                <div>
+                  <strong>Commercial Cardio Zone</strong>
+                  <p>Shock-absorbent treadmills, recumbent exercise bikes, and elliptical cross-trainers.</p>
+                </div>
+              </div>
+              <div class="point-item">
+                <span class="point-icon">✓</span>
+                <div>
+                  <strong>Dedicated Private Ladies Section</strong>
+                  <p>A separate, fully partitioned area ensuring 100% privacy, comfort, and peace of mind.</p>
+                </div>
+              </div>
+              <div class="point-item">
+                <span class="point-icon">✓</span>
+                <div>
+                  <strong>Hygiene & Climate Controlled</strong>
+                  <p>High-powered continuous ventilation, clean sanitization stations, and sanitized locker bays.</p>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-gold" style="margin-top: 1.5rem;">Schedule a Visit</a>
+          </div>
+
+          <div class="split-visual">
+            <div class="gym-stats-card">
+              <div class="stat-number">4.8★</div>
+              <div class="stat-label">Google Rating · 185+ Verified Reviews</div>
+            </div>
+            <div class="facility-card-grid">
+              <div class="facility-tile">
+                <span class="tile-icon">🏋️‍♂️</span>
+                <h4>Strength Floor</h4>
+                <p>Cast iron & rubber grip plates</p>
+              </div>
+              <div class="facility-tile">
+                <span class="tile-icon">🏃‍♂️</span>
+                <h4>Cardio Hub</h4>
+                <p>Commercial treadmill bays</p>
+              </div>
+              <div class="facility-tile">
+                <span class="tile-icon">🧘‍♀️</span>
+                <h4>Yoga Studio</h4>
+                <p>Private female training room</p>
+              </div>
+              <div class="facility-tile">
+                <span class="tile-icon">🚿</span>
+                <h4>Locker Rooms</h4>
+                <p>Clean showers & vanity areas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TRAINERS SECTION -->
+    <section id="trainers" class="section section-dark">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">COACHING MASTERY</span>
+          <h2 class="section-title">Coached By Dedicated Fitness Professionals</h2>
+          <p class="section-desc">Our certified trainers bring years of practical experience in bodybuilding, weight loss, and functional conditioning.</p>
+        </div>
+
+        <div class="trainers-grid">
+          <div class="trainer-card">
+            <div class="trainer-avatar">
+              <div class="avatar-placeholder">COACH</div>
+            </div>
+            <div class="trainer-info">
+              <h3>Head Strength Coach</h3>
+              <span class="trainer-role">Senior Strength & Conditioning Specialist</span>
+              <p>Specializes in posture rehabilitation, compound lifting mechanics, and dramatic muscle hypertrophy transformations.</p>
+              <div class="trainer-tags">
+                <span>Powerlifting</span>
+                <span>Hypertrophy</span>
+                <span>Injury Prevention</span>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="trainer-card">
+            <div class="trainer-avatar">
+              <div class="avatar-placeholder">TRAINER</div>
+            </div>
+            <div class="trainer-info">
+              <h3>Female Fitness & Yoga Lead</h3>
+              <span class="trainer-role">Certified Yoga & Mobility Instructor</span>
+              <p>Leads our exclusive evening ladies sessions with custom programs for weight management, core strength, and flexibility.</p>
+              <div class="trainer-tags">
+                <span>Hatha Yoga</span>
+                <span>Core Sculpt</span>
+                <span>Women's Wellness</span>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="trainer-card">
+            <div class="trainer-avatar">
+              <div class="avatar-placeholder">COACH</div>
+            </div>
+            <div class="trainer-info">
+              <h3>Functional & Cardio Coach</h3>
+              <span class="trainer-role">Athletic Conditioning Specialist</span>
+              <p>Guides members through dynamic HIIT protocols, stamina conditioning, and custom nutrition frameworks.</p>
+              <div class="trainer-tags">
+                <span>Metabolic Burn</span>
+                <span>Agility</span>
+                <span>Nutrition Prep</span>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. GALLERY SECTION WITH LIGHTBOX & FILTER -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">VISUAL TOUR</span>
+          <h2 class="section-title">Inside Fitness Emporium</h2>
+          <p class="section-desc">Take a closer look at our training atmosphere, equipment layout, and premium environment.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="gallery-filters" role="tablist">
+          <button class="filter-btn active" data-filter="all">All Spaces</button>
+          <button class="filter-btn" data-filter="strength">Strength Floor</button>
+          <button class="filter-btn" data-filter="cardio">Cardio Deck</button>
+          <button class="filter-btn" data-filter="ladies">Ladies Section</button>
+          <button class="filter-btn" data-filter="facilities">Amenities</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-item" data-category="strength">
+            <div class="gallery-placeholder g-strength">
+              <div class="gallery-overlay">
+                <h4>Olympic Free Weights Area</h4>
+                <p>Dumbbells, squat racks & bench stations</p>
+                <span class="zoom-icon">🔍 View</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cardio">
+            <div class="gallery-placeholder g-cardio">
+              <div class="gallery-overlay">
+                <h4>Cardio Endurance Bay</h4>
+                <p>Commercial treadmills and high-performance bikes</p>
+                <span class="zoom-icon">🔍 View</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="ladies">
+            <div class="gallery-placeholder g-ladies">
+              <div class="gallery-overlay">
+                <h4>Private Ladies Yoga & Fitness Suite</h4>
+                <p>100% private, air-conditioned female studio</p>
+                <span class="zoom-icon">🔍 View</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="strength">
+            <div class="gallery-placeholder g-cable">
+              <div class="gallery-overlay">
+                <h4>Cable Towers & Isolation Stations</h4>
+                <p>Full spectrum resistance machines</p>
+                <span class="zoom-icon">🔍 View</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="facilities">
+            <div class="gallery-placeholder g-locker">
+              <div class="gallery-overlay">
+                <h4>Hygienic Locker & Changing Rooms</h4>
+                <p>Clean, secure storage & washrooms</p>
+                <span class="zoom-icon">🔍 View</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="facilities">
+            <div class="gallery-placeholder g-frontdesk">
+              <div class="gallery-overlay">
+                <h4>Welcome Reception & Protein Bar</h4>
+                <p>Friendly staff assisting your journey daily</p>
+                <span class="zoom-icon">🔍 View</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT & LOCATION SECTION -->
+    <section id="contact" class="section section-dark">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">GET IN TOUCH</span>
+          <h2 class="section-title">Visit Our Facility in Gulshan-e-Iqbal</h2>
+          <p class="section-desc">Have a question or looking to join? Drop by or reach out through our team.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Information Details Column -->
+          <div class="contact-info-col">
+            <div class="contact-card">
+              <div class="c-icon">📍</div>
+              <div>
+                <h4>Address</h4>
+                <p>B-12, Block 1, Gulshan-e-Iqbal, Karachi, Pakistan</p>
+                <span class="c-note">Conveniently located near main Gulshan access roads</span>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="c-icon">📞</div>
+              <div>
+                <h4>Phone & WhatsApp</h4>
+                <p><a href="tel:+923360660676">+92 336 0660676</a></p>
+                <span class="c-note">Direct management helpline for inquiries</span>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="c-icon">⏰</div>
+              <div>
+                <h4>Operating Hours</h4>
+                <p><strong>General Hours:</strong> 06:00 AM – 12:00 AM (Midnight)</p>
+                <p><strong>Ladies Exclusive Hours:</strong> 05:00 PM – 12:00 AM</p>
+                <p><strong>Sunday:</strong> 08:00 AM – 10:00 PM</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="c-icon">💬</div>
+              <div>
+                <h4>Social & Chat</h4>
+                <div class="social-links-row">
+                  <a href="https://wa.me/923360660676?text=Hi%20Fitness%20Emporium%2C%20I%20would%20like%20to%20know%20about%20gym%20memberships." target="_blank" rel="noopener noreferrer" class="social-tag whatsapp">WhatsApp Chat</a>
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-tag fb">Facebook Page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-col">
+            <div class="form-container">
+              <h3>Send Us a Direct Message</h3>
+              <p>Fill out the form below and our team will get in touch via call or WhatsApp.</p>
+
+              <form id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="contactName">Full Name *</label>
+                  <input type="text" id="contactName" name="name" placeholder="Muhammad / Sarah Khan" required>
+                  <span class="field-error" id="nameError"></span>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contactPhone">Phone Number *</label>
+                    <input type="tel" id="contactPhone" name="phone" placeholder="0336-0000000" required>
+                    <span class="field-error" id="phoneError"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="name@example.com">
+                    <span class="field-error" id="emailError"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject">I'm Interested In *</label>
+                  <select id="contactSubject" name="subject" required>
+                    <option value="">-- Choose Subject --</option>
+                    <option value="New Membership Plans">New Membership Enquiry</option>
+                    <option value="Ladies-Only Yoga & Hours">Ladies-Only Hours / Yoga</option>
+                    <option value="Personal Trainer Consultation">Personal Training Consultation</option>
+                    <option value="Corporate / Group Packages">Corporate / Group Packages</option>
+                    <option value="General Question">General Inquiry / Tour</option>
+                  </select>
+                  <span class="field-error" id="subjectError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMessage">Message *</label>
+                  <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us your fitness goals or questions..." required></textarea>
+                  <span class="field-error" id="messageError"></span>
+                </div>
+
+                <!-- Honeypot anti-spam -->
+                <div class="form-honey" style="display:none;" aria-hidden="true">
+                  <input type="text" name="hp_field" id="hpField" tabindex="-1" autocomplete="off">
+                </div>
+
+                <button type="submit" class="btn btn-gold btn-block">Send Message</button>
+                <div class="form-feedback" id="contactFormStatus" role="alert"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed Section -->
+        <div class="map-wrapper">
+          <div class="map-title-row">
+            <h4>Location: B-12, Block 1, Gulshan-e-Iqbal, Karachi</h4>
+            <a href="https://maps.google.com/?q=B-12+Block+1+Gulshan-e-Iqbal+Karachi" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Open in Google Maps</a>
+          </div>
+          <div class="map-iframe-container">
+            <iframe 
+              title="Fitness Emporium Gulshan-e-Iqbal Karachi Location Map"
+              src="https://maps.google.com/maps?q=B-12,%20Block%201,%20Gulshan-e-Iqbal,%20Karachi&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="380" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="logo-text">
+          <span class="brand-title">FITNESS EMPORIUM</span>
+          <span class="brand-sub">GULSHAN-E-IQBAL · KARACHI</span>
+        </div>
+        <p class="footer-tagline">
+          Gulshan’s top-rated fitness facility dedicated to strength, longevity, and community wellbeing.
+        </p>
+        <div class="google-badge-footer">
+          ⭐ <strong>4.8 / 5.0</strong> Rating based on 185+ real member reviews on Google
+        </div>
       </div>
 
-      <div class="stat-card">
-        <span class="stat-label">LIVES</span>
-        <span class="stat-value" id="lives-display">3</span>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#memberships">Membership Plans</a></li>
+          <li><a href="#classes">Class Timetable</a></li>
+          <li><a href="#our-gym">Facility Tour</a></li>
+          <li><a href="#trainers">Certified Trainers</a></li>
+          <li><a href="#gallery">Photo Gallery</a></li>
+          <li><a href="#contact">Contact & Map</a></li>
+        </ul>
       </div>
 
-      <div class="stat-card">
-        <span class="stat-label">SPEED</span>
-        <span class="stat-value"><span id="speed-display">150</span> <small>px/s</small></span>
+      <div class="footer-col">
+        <h4>Special Programs</h4>
+        <ul class="footer-links">
+          <li><a href="#classes">Female-Only Evening Wing</a></li>
+          <li><a href="#classes">Mindful Yoga & Pilates</a></li>
+          <li><a href="#trainers">1-on-1 Personal Training</a></li>
+          <li><a href="#memberships">Corporate Memberships</a></li>
+          <li><a href="#contact">Free Day-Pass Trial</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Contact</h4>
+        <p class="footer-contact-item"><strong>Address:</strong> B-12, Block 1, Gulshan-e-Iqbal, Karachi</p>
+        <p class="footer-contact-item"><strong>Phone:</strong> +92 336 0660676</p>
+        <p class="footer-contact-item"><strong>Timings:</strong> 6:00 AM – Midnight</p>
       </div>
     </div>
 
-    <!-- Quick Control Bar -->
-    <div class="control-bar">
-      <button id="mute-btn" class="arcade-btn arcade-btn-secondary" type="button" aria-label="Toggle Mute">
-        <span id="mute-icon">🔊</span> <span id="mute-text">Sound: ON</span>
-      </button>
-      <button id="pause-btn" class="arcade-btn" type="button" disabled>Pause</button>
-      <button id="reset-btn" class="arcade-btn arcade-btn-secondary" type="button">Reset</button>
+    <div class="footer-bottom">
+      <div class="container bottom-row">
+        <p>© 2026 Fitness Emporium. All Rights Reserved. Gulshan-e-Iqbal, Karachi.</p>
+        <p class="note">Concept business presentation based on verified regional research.</p>
+      </div>
     </div>
+  </footer>
 
-    <!-- Playfield Arena -->
-    <div class="playfield-frame" id="game-area">
-      <canvas id="game-canvas" width="400" height="500"></canvas>
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/923360660676?text=Hello%20Fitness%20Emporium%2C%20I%20am%20interested%20in%20membership%20details." 
+     class="whatsapp-floating-btn" 
+     id="whatsappBtn"
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat directly on WhatsApp with Fitness Emporium">
+    <span class="wa-icon">💬</span>
+    <span class="wa-text">Chat on WhatsApp</span>
+  </a>
 
-      <!-- Ready / How to Play Overlay -->
-      <div id="ready-screen" class="arcade-overlay">
-        <div class="overlay-card">
-          <h2>HOW TO PLAY</h2>
-          <div class="instructions-list">
-            <div class="instruction-item">
-              <span class="key-badge">◄ ► / A D</span>
-              <p>Move the harvest basket left and right.</p>
-            </div>
-            <div class="instruction-item">
-              <span class="key-badge">P</span>
-              <p>Pause or resume game anytime.</p>
-            </div>
-            <div class="instruction-item">
-              <span class="item-icon-apple">●</span>
-              <p>Catch <strong>Red Apples</strong> for <strong>+1 point</strong>. Don't let them fall! Missing an apple costs <strong>1 life</strong> and <strong>-1 point</strong>.</p>
-            </div>
-            <div class="instruction-item">
-              <span class="item-icon-bomb">▲</span>
-              <p>Avoid <strong>Bombs</strong>! Catching a bomb costs <strong>1 life</strong>.</p>
-            </div>
-          </div>
-          <button id="start-btn" class="arcade-btn arcade-btn-primary" type="button">Start Game</button>
-        </div>
-      </div>
-
-      <!-- Pause Overlay (Stage 4: Clear Paused Overlay that blocks accidental playfield input) -->
-      <div id="pause-screen" class="arcade-overlay hidden" aria-modal="true" role="dialog">
-        <div class="overlay-card">
-          <div class="pause-badge">PAUSED</div>
-          <h2>GAME SUSPENDED</h2>
-          <p class="overlay-msg">Motion, timers, and spawning are frozen. Click Resume or press <strong>P</strong> to continue harvesting.</p>
-          <div class="pause-stats-mini">
-            <span>Current: <strong id="pause-score">0</strong></span>
-            <span>Record: <strong id="pause-best-score">0</strong></span>
-          </div>
-          <button id="resume-btn" class="arcade-btn arcade-btn-primary" type="button">Resume</button>
-        </div>
-      </div>
-
-      <!-- Game Over Overlay (Stage 4: Shows Final Score & Best Score) -->
-      <div id="game-over-screen" class="arcade-overlay hidden" aria-modal="true" role="dialog">
-        <div class="overlay-card">
-          <h2>GAME OVER</h2>
-          <div class="final-score-box">
-            <span class="final-label">Final Harvest</span>
-            <span class="final-value" id="final-score">0</span>
-            <span class="final-unit">Apples Gathered</span>
-          </div>
-          <div class="best-record-banner" id="best-record-banner">
-            <span class="best-record-label">All-Time Record</span>
-            <span class="best-record-value" id="game-over-best-score">0</span>
-          </div>
-          <button id="restart-btn" class="arcade-btn arcade-btn-primary" type="button">Play Again</button>
-        </div>
+  <!-- Lightbox Modal for Gallery -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close dialog">&times;</button>
+      <div class="lightbox-visual" id="lightboxVisual"></div>
+      <div class="lightbox-caption" id="lightboxCaption">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
       </div>
     </div>
   </div>
